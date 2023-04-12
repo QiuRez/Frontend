@@ -1,0 +1,911 @@
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/fonts/Inter/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("/fonts/Inter/static/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Arimo-Regular";
+  src: url("/fonts/Arimo/static/Arimo-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: black url("/img/Circuit\ Primary.svg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.logo {
+  width: 114px;
+  height: 99px;
+  margin-left: 58px;
+  box-sizing: border-box;
+}
+
+.searchform {
+  display: flex;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search .input {
+  outline: none;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  background-color: #e7e1e1;
+  padding-left: 10px;
+  height: 30px;
+  width: 320px;
+  font-size: 14px;
+  font-family: "Arimo-Regular";
+}
+
+.search .input::placeholder {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: bold;
+}
+
+.search .submit {
+  border: none;
+  border-radius: 0 15px 15px 0;
+  height: 30px;
+  width: 126px;
+  min-width: 50px;
+  cursor: pointer;
+  background-color: #633838;
+  box-shadow: inset 0 5px 15px rgba(9, 9, 9, 0.19);
+  font-family: "Inter-Bold";
+  color: #e7e1e1;
+  font-size: 14px;
+  transition: 0.1s all;
+}
+
+.search .submit:hover {
+  font-size: 16px;
+  text-shadow: 2px 2px rgba(9, 9, 9, 0.4);
+}
+
+.kontakti {
+  color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nomer {
+  background-color: #633838;
+  border-radius: 27px;
+  width: 155px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Inter-Bold";
+}
+
+.nomer:hover {
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.kategorii {
+  margin-bottom: auto;
+  margin: 0.7% auto;
+  background-color: #633838;
+  border-radius: 13px;
+  padding: 0.7%;
+  font-family: "Inter-Bold";
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 20px;
+  min-width: 120px;
+}
+
+.kategorii button {
+  font-family: "Inter-Bold";
+  font-size: 14px;
+  color: #e8e8e8;
+  text-decoration: none;
+  text-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: #633838;
+  border: none;
+  transition: 0.2s all;
+}
+
+.kategorii button:hover {
+  text-shadow: 2px 2px 2px black;
+  transform: scale(1.1);
+}
+
+.korzina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.korzina_button {
+  width: 100px;
+  height: 29px;
+  border: none;
+  background-color: #d9d9d9;
+  font-family: "Inter-Bold";
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 17px;
+  box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.korzina_button:hover {
+  background-color: #633838;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: #d9d9d9;
+}
+
+.user_profile {
+  margin-top: 23px;
+  display: flex;
+  padding-right: 20px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user_profile .user_first_name {
+  display: flex;
+  justify-content: center;
+  color: #e8e8e8;
+  font-family: "Inter-Bold";
+}
+
+.content {
+  margin-top: 30px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(16, 16, 15, 0.71);
+  flex-wrap: wrap;
+  border-radius: 48px;
+  padding-bottom: 10px;
+}
+
+.content .tovar {
+  width: 90%;
+  height: 165px;
+  margin: 1.5%;
+  background-color: #d9d9d9;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.content .tovar .photo {
+  width: 233px;
+  height: 165px;
+  display: flex;
+  float: left;
+  margin: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.content .tovar .photo img {
+  margin: 0 auto;
+  border-radius: 10px 0 0 10px;
+  mix-blend-mode: multiply;
+  max-width: 233px;
+  max-height: 165px;
+  object-fit: contain;
+}
+
+.content .tovar .photo img[src=""] {
+  display: none;
+}
+
+.content .tovar .name_tovar {
+  width: 55%;
+  display: flex;
+}
+
+.content .tovar .name_tovar p {
+  margin-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "Inter-Bold";
+  font-size: 14px;
+}
+
+.content .tovar .info_tovara {
+  display: flex;
+  height: 70%;
+  width: auto;
+  margin-top: 10px;
+}
+
+.content .tovar .info_tovara .info {
+  width: 70.13%;
+  overflow: hidden;
+  height: auto;
+}
+
+.content .tovar .info_tovara .info p {
+  margin-left: 15px;
+  font-family: "Inter-Medium";
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+
+.content .tovar .info_tovara .price_and_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.content .tovar .info_tovara .price_and_button .price {
+  font-family: "Inter-Bold";
+  font-size: 14px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.content .tovar .info_tovara .price_and_button .button {
+  border: none;
+  border-radius: 6px;
+  width: 127px;
+  height: 50px;
+  background-color: #2b0e0e;
+  cursor: pointer;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25), inset 0 5px 4px rgba(0, 0, 0, 0.25);
+  color: #ededed;
+  font-size: 14px;
+  font-family: "Inter-Bold";
+  transition: background-color 0.15s, color 0.15s, transform 0.2s;
+}
+
+.content .tovar .info_tovara .price_and_button .button:hover {
+  background-color: #d9d9d9;
+  color: black;
+  transform: scale(1.07);
+}
+
+.pages {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pages button {
+  background-color: #633838;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  color: #e8e8e8;
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.modalDialog {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  height: 210px;
+  border-radius: 18px;
+  z-index: 100;
+}
+
+.modalDialog button {
+  align-self: flex-end;
+  width: 100%;
+  height: 25px;
+  background-color: #633838;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px 18px 0 0;
+}
+
+.modalDialog h2 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.modalDialog p {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Inter-Medium";
+}
+
+.modal {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.content_tovar {
+  display: flex;
+  margin-top: 50px;
+  padding-top: 42px;
+  padding-bottom: 20px;
+  max-width: 1200px;
+  background-color: rgba(16, 16, 15, 0.71);
+  border-radius: 48px;
+}
+
+.img_price {
+  margin-left: 40px;
+  width: 288px;
+  height: 516px;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo_tovar {
+  background-color: #d9d9d9;
+  width: 288px;
+  height: 288px;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo_tovar img {
+  border-radius: 17px;
+  mix-blend-mode: multiply;
+  z-index: 0;
+  max-width: 288px;
+  max-height: 288px;
+}
+
+.price_tovar {
+  background-color: #d9d9d9;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  height: 198px;
+  border-radius: 17px;
+  flex-direction: column;
+  font-family: "Inter-Bold";
+}
+
+.price_tovar p {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.price_tovar button {
+  background-color: #2b0e0e;
+  color: #fff;
+  margin-top: 40px;
+  width: 80%;
+  height: 61px;
+  border-radius: 24px;
+  font-size: 24px;
+  font-family: "Inter-Bold";
+  border: none;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25), inset 0 5px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.15s all;
+}
+
+.price_tovar button:hover {
+  background-color: #d9d9d9;
+  color: black;
+}
+
+.info_tovara_kartochka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 789px;
+  height: max-content;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  margin-left: 50px;
+  margin-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.name_opisanie_tovara {
+  font-family: "Inter-Medium";
+  height: 20px;
+  width: 95%;
+  padding-bottom: 10px;
+}
+
+.name_opisanie_tovara p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.opisanie_tovara_kartochka {
+  height: auto;
+  margin-bottom: 15px;
+  width: 95%;
+}
+
+.opisanie_tovara_kartochka p {
+  margin-top: 10px;
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+
+.harakteristiki {
+  width: 95%;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  height: auto;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Inter-Bold";
+  background-color: #b6b6b6;
+  border-radius: 30px;
+}
+
+.harakteristiki hr {
+  margin-top: 5px;
+}
+
+.harakteristiki table {
+  margin: 0 auto;
+  width: 95%;
+  text-align: start;
+}
+
+.harakteristiki td {
+  padding-top: 10px;
+}
+
+.harakteristiki td:first-child {
+  display: list-item;
+}
+
+.harakteristiki td:empty {
+  display: none;
+  padding-top: 0px;
+}
+
+.content_add_tovar {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(16, 16, 15, 0.71);
+  flex-wrap: wrap;
+  border-radius: 48px;
+}
+
+.content_add_tovar #h2_add_tovar {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-family: "Inter-Medium";
+}
+
+.content_add_tovar .opisanie {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 100px;
+  justify-content: center;
+}
+
+.content_add_tovar #name_add_tovar {
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+.upload_photo_preview {
+  width: 350px;
+  color: #fff;
+  text-align: center;
+}
+
+.upload_photo_preview img {
+  width: 250px;
+  height: 250px;
+}
+
+.content_add_tovar #create_add_tovar {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 170px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_add_tovar .opisanie #selector {
+  height: 30px;
+  width: 120px;
+  font-family: "Inter-Medium";
+  padding-left: 5px;
+}
+
+.content_add_tovar .opisanie .harakteristika_add_tovar {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content_add_tovar .opisanie .harakteristiki_and_znachenii {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.content_add_tovar .opisanie #harakteristiki {
+  margin-right: 20px;
+}
+
+.content_add_tovar .opisanie #znachenie {
+  margin-right: 10px;
+}
+
+.content_add_tovar .opisanie .harakteristiki_and_znachenii input:nth-child(3) {
+  margin-right: 10px;
+}
+
+.content_add_tovar .opisanie .price_and_kategoriya #price_add_tovar {
+  width: 100px;
+}
+
+.content_add_tovar .opisanie .price_and_kategoriya {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content_add_tovar .upload_photo_preview #input_photo_add_tovar {
+  margin: 0 auto;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.content_add_tovar .upload_photo_preview #image_add_tovar {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+#drop {
+  display: none;
+}
+
+@media only screen and (max-device-width: 577px) {
+  .header {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search {
+    width: 100%;
+    height: 27px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .searchform {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .search .input {
+    height: 27px;
+    max-width: 65%;
+    font-size: 12px;
+    padding-left: 13px;
+  }
+
+  .search .submit {
+    height: 27px;
+    margin: 0;
+    position: relative;
+    max-width: 30%;
+    font-size: 12px;
+  }
+
+  .search .submit:hover {
+    font-size: 14px;
+  }
+
+  .kontakti {
+    margin: 0 auto;
+  }
+
+  .korzina_button {
+    display: none;
+  }
+
+  .user_profile {
+    display: none;
+  }
+
+  #drop {
+    display: block;
+  }
+
+  .kategorii {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+    width: 155px;
+    padding: 5px 0 5px;
+    height: 20px;
+    transition: height 1s;
+  }
+
+  .kategorii button {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .kategorii--active {
+    height: 265px;
+  }
+
+  .content {
+    margin: 0;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 25px 25px 0px 0px;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 3%;
+    padding-right: 3%;
+    flex-direction: row;
+  }
+
+  .content .tovar {
+    max-width: 152px;
+    height: 283px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .content .tovar .photo {
+    width: 152px;
+    height: 108px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content .tovar .photo img {
+    border-radius: 10px 10px 0 0;
+    max-width: 152px;
+    max-height: 108px;
+  }
+
+  .content .tovar .name_tovar {
+    width: 90%;
+    margin: 0 auto;
+    height: 32px;
+  }
+
+  .content .tovar .name_tovar p {
+    font-size: 10px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .content .tovar .info_tovara {
+    width: 90%;
+    height: 144px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .content .tovar .info_tovara .info {
+    width: 114px;
+    height: 58px;
+    margin: 0 auto;
+  }
+
+  .content .tovar .info_tovara .info p {
+    font-size: 9px;
+    text-align: center;
+    margin: 0;
+    -webkit-line-clamp: 5;
+  }
+
+  .content .tovar .info_tovara .price_and_button {
+    margin-top: 10px;
+  }
+
+  .content .tovar .info_tovara .price_and_button .price {
+    font-size: 9px;
+  }
+
+  .content .tovar .info_tovara .price_and_button .button {
+    width: 63px;
+    height: 25px;
+    font-size: 9px;
+    border: none;
+  }
+
+  /* Страница товара */
+
+  .img_price {
+    margin: 0 auto;
+    height: 400px;
+  }
+
+  .content_tovar {
+    flex-direction: column;
+    padding-top: 25px;
+    margin-top: 25px;
+  }
+
+  .img_price .price_tovar {
+    height: 55px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .img_price .price_tovar button {
+    margin: 0;
+    height: 30px;
+    width: 110px;
+    font-size: 13px;
+    padding-bottom: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25),
+      inset 0 2px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  .img_price .price_tovar p {
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+  .opisanie_tovara_kartochka {
+    max-height: 95%;
+    margin-bottom: 10px;
+  }
+
+  .info_tovara_kartochka {
+    width: 288px;
+    max-height: 1200px;
+    margin: 0 auto;
+    padding-bottom: 0;
+  }
+
+  .info_tovara_kartochka h3 {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .info_tovara_kartochka p {
+    font-size: 13px;
+  }
+
+  .harakteristiki {
+    max-height: 500px;
+    width: 100%;
+  }
+
+  .harakteristiki table {
+    font-size: 12px;
+    padding-left: 7px;
+  }
+}
+
+@media only screen and (max-device-width: 814px) and (min-device-width: 578px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .header .logo,
+  .search,
+  .nomer {
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  #drop {
+    display: block;
+  }
+
+  .kategorii {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+    width: 155px;
+    padding: 5px 0 5px;
+    height: 20px;
+    transition: height 1s;
+  }
+
+  .kategorii button {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .kategorii--active {
+    height: 265px;
+  }
+
+  .content_tovar .name_opisanie_tovara {
+    height: auto;
+  }
+
+  .content .tovar .info_tovara {
+    justify-content: space-around;
+  }
+}
