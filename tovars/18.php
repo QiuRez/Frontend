@@ -1,0 +1,1 @@
+<?php $id = 18; include($_SERVER["DOCUMENT_ROOT"].'/php/kartochka_tovara.php'); ?>
