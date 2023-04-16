@@ -628,7 +628,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-device-width: 577px) {
+@media screen and (max-width: 577px) {
   .header {
     margin: 0;
     padding: 0;
@@ -861,7 +861,7 @@ body {
   }
 }
 
-@media only screen and (max-device-width: 814px) and (min-device-width: 578px) {
+@media screen and (max-width: 850px) and (min-width: 578px) {
   .header {
     flex-direction: column;
     align-items: center;
